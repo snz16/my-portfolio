@@ -9,7 +9,7 @@ export default function Testimonials() {
         title: "Senior Developer",
         img:
             "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        icon: "assets/twitter.png",
+        icon: "assets/linkedin.png",
         desc:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
         },
@@ -19,7 +19,7 @@ export default function Testimonials() {
         title: "Co-Founder of DELKA",
         img:
             "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        icon: "assets/youtube.png",
+        icon: "assets/linkedin.png",
         desc:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
         featured: true,
@@ -41,8 +41,8 @@ export default function Testimonials() {
             <h1>Testimonials</h1>
             <div className="container">
                 {data.map((d)=> (
-                        
-                <div className="card">
+                
+                <div className={d.featured ? "card featured" : "card"}>
                     <div className="top">
                         <img src="assets/right-arrow.png" className="left" alt="" />
                         <img  className="user" src={d.img} alt="" />
