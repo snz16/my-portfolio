@@ -5,34 +5,34 @@ export default function Testimonials() {
     const data = [
        {
         id: 1,
-        name: "Tom Durden",
-        title: "Senior Developer",
+        name: "A. Ikaika Gleisberg",
+        title: "Assistant Professor of Sociology & Sexuality Studies",
         img:
-            "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            "https://media-exp1.licdn.com/dms/image/C5603AQHy3dWHJPYjXw/profile-displayphoto-shrink_200_200/0/1516270823069?e=1633564800&v=beta&t=TglCHAWQ0AxQhClDv69DoBhHP2ftcfvzw7rptIUYUy8",
         icon: "assets/linkedin.png",
         desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+            "Serena is organized, focused, and methodical with her tasks. She is also an effective communicator, creative problem-solver, and a team player.",
         },
         {
         id: 2,
-        name: "Alex Kalinski",
-        title: "Co-Founder of DELKA",
+        name: "Jaclyn Mullen",
+        title: "Growth Marketing Manager",
         img:
-            "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            "https://media-exp1.licdn.com/dms/image/C5603AQFBQFe7NuqgWg/profile-displayphoto-shrink_200_200/0/1601298549122?e=1633564800&v=beta&t=oUThPxgEt7ehYL_X_BrVuBHPOHEoELaaoPktQLh9ekQ",
         icon: "assets/linkedin.png",
         desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
+            "Serena is laser-focused on user experience. She brings an open mind, customer-centric curiosity and an empathetic approach to any brand and organization. Armed with Analytics knowledge, she isn't afraid to speak up and pair great ideas with measurable data. ",
         featured: true,
         },
         {
         id: 3,
-        name: "Martin Harold",
-        title: "CEO of ALBI",
+        name: "Laurel Lane",
+        title: "Marketing Faculty at MSU Denver",
         img:
-            "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            "https://media-exp1.licdn.com/dms/image/C4E03AQF0lmCWgvyWjQ/profile-displayphoto-shrink_200_200/0/1627434860388?e=1633564800&v=beta&t=uB6JZnRnOSNrEiEv8Rp7rH1JuaYqiTlvyxxxVTrUN3g",
         icon: "assets/linkedin.png",
         desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+            "Serena is a well-rounded student and looks forward to becoming a marketing professional. The Digital Marketing Science course has given her the foundational knowledge and hands-on skills that she can put to work right now! Any company would be lucky to hire Serena!",
         },
     ];
 
