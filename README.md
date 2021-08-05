@@ -4,4 +4,4 @@ Displays the following:
 - Portfolio
 - Works
 - Testmonials
-- Contacts
+- Let's Connect Form
