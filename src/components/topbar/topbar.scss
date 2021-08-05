@@ -1,0 +1,100 @@
+@import "../../global.scss";
+
+.topbar{
+    //style for the top bar
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    color: $mainColor;
+    //Keeps the top bar at the top of the page
+    position: fixed; 
+    top: 0; 
+
+    z-index: 3; //Allows you to see the topbar even when you scroll up or down
+    transition: all 1s ease;
+
+    .wrapper{
+        padding: 10px 30px;
+        display: flex; //written Horizontal 
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+
+        .logo{
+            width: 100px;
+            height: 70px;
+            margin-right: 40px;
+            overflow: hidden;
+            align-items: left;
+
+            img {
+                width: 55px;
+            }
+        }
+
+        .itemContainer{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+
+            .icon{
+                font-size: 18px;
+                margin-right: 5px;
+            }
+
+            a{
+                color: inherit;
+            }
+            span{
+                font-size: 15px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .right{
+        .hamburger{
+            width: 32px;
+            height: 25px;
+            display: flex; //Makes sure its in the frame 
+            flex-direction: column;
+            justify-content: space-between; // Spaces out the lines to make hamburger
+            cursor: pointer; // when you hover over an object your cursor turns into a pointer
+
+            span{
+                width: 100%;
+                height: 3px;
+                background-color: $mainColor;
+                transform-origin: left;
+                transition: all 2s ease; //Makes the hamburger transition to an X when clicked
+            }
+        }
+    }
+
+    &.active{
+        background-color: $mainColor;
+        color: white;
+
+
+        .hamburger{
+            span{
+                &:first-child{
+                    background-color: white;
+                    transform: rotate(45deg); //Makes a diagional line for the X
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child{
+                    background-color: white;
+                    transform: rotate(-45deg); //Makes a diagional line for the X
+                }
+            }
+        }
+    }
+}

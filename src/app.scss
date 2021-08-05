@@ -1,0 +1,25 @@
+.app {
+    height: 100vh;
+
+    .sections{
+
+        width: 100%;
+        height: calc(100vh - 70px); //Makes the whole page this color and start after 70px aka topbar
+        background-color: lightsalmon;
+        position: relative;//Positions the text that is put inside sections 
+        top: 70px;
+        scroll-behavior: smooth; //Makes the scrolling slower and smoother
+        scroll-snap-type: y mandatory;//Allows you to scroll into each section in a cleaner way without showing the sections before or after it
+        scrollbar-width: none; //for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        //Adds a scroll bar and divides the sections visibly
+        > * {
+            width: 100w;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
