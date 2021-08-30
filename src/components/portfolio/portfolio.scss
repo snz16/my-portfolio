@@ -32,7 +32,7 @@
     }
 
     .container{ //The container that the items are in 
-        width: 80%;
+        // width: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -48,14 +48,16 @@
             align-items: center;
             justify-content: center;
             color: white;
+            background-color: #75d481;
             position: relative;
             transition: all .5s ease;
             cursor: pointer;
 
+        
+        
         h3{ 
             position: absolute;
             font-size: 20px;
-
         }
 
         img{ //Changes the image fit in container
@@ -63,6 +65,30 @@
             height: 100%;
             object-fit: cover;
             z-index: 1;
+
+            .Modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            padding: 2em;
+            min-width: 20em;
+            max-width: 70%;
+            color: #f00;
+            background-color: #fff;
+            border-radius: 1em;
+            transform: translate(-50%, -50%);
+            outline: transparent;
+            }    
+        .Overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.4);
+            } 
+
         }
 
         &:hover{ //Shows project name when you hover over image

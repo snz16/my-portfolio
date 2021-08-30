@@ -2,20 +2,23 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss"
 import  { useEffect, useState } from "react"
 import {
-  featuredPortfolio,
+  certificatesPortfolio,
   webPortfolio,
   mobilePortfolio,
   designPortfolio,
   brandingPortfolio,
 } from "../../data";
 
+import React from 'react';
+import Modal from "react-modal";
+
 export default function Portfolio() {
     const [selected, setSelected] = useState("featured"); //Helps decide which tab is selected
     const [data, setData] = useState([]);
     const list = [
         {
-            id: "featured",
-            title: "Featured",
+            id: "certificates",
+            title: "Certificates",
         },
         {
             id: "design",
@@ -37,8 +40,8 @@ export default function Portfolio() {
 
     useEffect(() => {
         switch(selected){
-            case "featured": 
-                setData(featuredPortfolio);
+            case "certificates": 
+                setData(certificatesPortfolio);
                 break;
              case "design": 
                 setData(designPortfolio);
@@ -53,10 +56,38 @@ export default function Portfolio() {
                 setData(webPortfolio);
                 break;
             default:
-                setData(featuredPortfolio);
+                setData(certificatesPortfolio);
         }
     }, [selected])
 
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+   const setModalIsOpenToTrue = () => {
+     setModalIsOpen(true);
+   };
+
+   const setModalIsOpenToFalse = () => {
+     setModalIsOpen(false);
+   };
+
+   const customStyles  = {
+     content: {
+       top: "50%",
+       left: "50%",
+       right: "auto",
+       bottom: "auto",
+       marginRight: "-50%",
+       transform: "translate(-50%, -50%)",
+       backgroundColor: "#F0AA89",
+     },
+     overlay: {
+       top: 0,
+       right: 0,
+       bottom: 0,
+       left: 0,
+       backgroundColor: "#000000",
+     },
+   };
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
@@ -74,9 +105,15 @@ export default function Portfolio() {
                 {data.map((d) => (
                 <div className="item">
                     <img 
-                        src={"d.img"} 
+                        src={d.img} 
                         alt=""
-                    />
+                        onClick={setModalIsOpenToTrue}/>
+                        <Modal isOpen={modalIsOpen} style={customStyles} onRequestClose={()=> setModalIsOpen(false)}>
+                          <button onClick={setModalIsOpenToFalse}>Close</button>
+                          <img src={d.img} alt=""/>
+                          <h3>{d.title}</h3>
+                          <p>{d.desc}</p>
+                        </Modal>
                     <h3>{d.title}</h3>
                 </div> 
                 ))}
