@@ -60,17 +60,17 @@ export default function Portfolio() {
         }
     }, [selected])
 
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false); //Defines modalIsOpen and setModalIsOpen and sets them as false
 
-   const setModalIsOpenToTrue = () => {
+   const setModalIsOpenToTrue = () => {  // Sets the modal as setModalIsOpen
      setModalIsOpen(true);
    };
 
-   const setModalIsOpenToFalse = () => {
+   const setModalIsOpenToFalse = () => { //Tells the Modal to Close makeing setModalIsOpen to false
      setModalIsOpen(false);
    };
 
-   const customStyles  = {
+   const customStyles  = {  //Styles the Open Modal
      content: {
        top: "50%",
        left: "50%",
@@ -80,7 +80,7 @@ export default function Portfolio() {
        transform: "translate(-50%, -50%)",
        backgroundColor: "#F0AA89",
      },
-     overlay: {
+     overlay: {  //TEST: Haven't had the overlay to work yet
        top: 0,
        right: 0,
        bottom: 0,
@@ -103,6 +103,8 @@ export default function Portfolio() {
             </ul>
             <div className="container">
                 {data.map((d) => (
+                  //Once the img is clicked on the Modal will open
+                  //When you click Close then the Modal will close
                 <div className="item">
                     <img 
                         src={d.img} 
